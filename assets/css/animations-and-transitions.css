@@ -1,0 +1,100 @@
+/* keyframe utilities */
+
+    /* nav */
+
+        @keyframes AnimateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+    /* Hero */
+
+        /* introTxt */
+
+        @keyframes AnimateIntroTxt {
+            0% {
+                transform: translateX(-100%) scale(0);
+            }
+
+            100% {
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        /* btn */ 
+
+        @keyframes AnimateBtn {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* photo */
+
+        @keyframes AnimatePhoto {
+            0% {
+                transform: translateX(100%) scale(0);
+            }
+            100% {
+                transform: translateX(0) scale(1);
+            }
+        }
+/* animation utilities */
+
+    /* section animation utility */
+    .showSect {
+        opacity: 1;
+    }
+
+    /* nav animations */
+
+    .nav-color-change {
+        background-color: rgb(27,3,60);
+        .brand {
+            text-shadow: 0px 0px 10px aquamarine;
+        }
+        .nav-item:hover {
+            color: white;
+            text-shadow: 0px 0px 5px aquamarine;
+        }
+    }
+
+    /* about animations */
+    
+    .showRocket {
+        transform: translateX(0) translateY(0);
+    }
+
+        /* about navs */
+
+        .showTxt {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+        .hideTxt1 {
+            opacity: 0;
+            transform: translateX(-150%) scale(0);
+        }
+        .inactiveBtn1 {
+            background-color: aquamarine;
+            border: 1px solid white;
+            box-shadow: none;
+        }
+        .activeAbtNav {
+            background-color: aquamarine;
+            border: none;
+            box-shadow: 0px 0px 20px 5px aqua;
+        }
+
+    /* Project section animations */
+
+        .showCard {
+            transform: translateX(0) scale(1);
+        }
+        
