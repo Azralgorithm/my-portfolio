@@ -1,34 +1,188 @@
-@media screen and (max-width: 768px) {
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 10px;
-        width: 100%;
+/* tablet display */
+
+    @media screen and (max-width: 768px) {
+        /* navbar */
+
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+                width: 100%;
+            }
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 100px;
+                gap: 40px;
+                display: none;
+                justify-content: center;
+                flex-direction: column;
+                background-color: black;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+            }
+            .hamburger {
+                display: flex;
+            }
+            /* hamburger on toggle */
+                .hamburger.active .bar:nth-child(2) {
+                    opacity: 0;
+                }
+                .hamburger.active .bar:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+                .hamburger.active .bar:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+        
+        /* hero section */
+            .introduction {
+                position: absolute;
+                bottom: 0px;
+                margin-bottom: -20px;
+            }
+            .photo {
+                position: absolute;
+                top: -27px;
+                margin: 0 auto;
+                transform: scale(0.8);
+             } 
+
+        /* About Section */
+             .planet {
+                left: -200px;
+                transform: scale(0.6);
+             }
+             .about-label {
+                left: -20px;
+                transform: scale(0.6);
+             }
+             .aboutTxt {
+                font-size: 15px;
+             }
+             .rocket {
+                margin-bottom: 20px;
+                transform: translateX(-100px) translateY(65px) scale(0.7);
+             }
+             .astronaut {
+                z-index: 10;
+             }
+            
+        /* projects section */
+             .projects {
+                height: fit-content;
+             }
+             .card-container {
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 20px;
+             }
+             .card {
+                width: 290px;
+             }
+             .tooltip:nth-child(1) {
+                position: fixed;
+                right: 10px;
+                bottom: 10px;
+                opacity: 1;
+             }
+             .tooltip:nth-child(2) , 
+             .tooltip:nth-child(3) {
+                display: none;
+             }
+             .project-label {
+                position: fixed;
+                top: 100px;
+                right: -30px;
+                opacity: 1;
+                scale: 0.7;
+             }
+        
+        /* contact Section */
+             .contact-me {
+                height: auto;
+             }
+             .contact-container {
+                scale: 0.7;
+                flex-direction: column;
+                height: auto;
+             }
+             .contact-form-container {
+                width: 500px;
+             }
+    }  
+    
+/* Large Screen Phones */
+
+    @media screen and (max-width: 425px) {
+
+        /* navs */
+            .hamburger {
+                scale: 0.8;
+            }
+
+        /* hero section */
+            .hero {
+                justify-content: center;
+                gap: 30px;
+            }
+            .introduction {
+                scale: 0.7;
+            }
+            .photo {
+                scale: 0.8;
+            }
+        /* about section */
+            .about-me {
+                position: static;
+                z-index: 10;
+            }
+            .planet {
+                display: none;
+            }
+            .about-label {
+                scale: 0.9;
+                top: 20px;
+                left: 40px;
+            }
+            .rocket {
+                scale: 0.8;
+                left:10px;
+                bottom: -30px;
+            }
+            .astronaut {
+                display: none;
+            }
+
+        /* project section */
+            .projects {
+                position: relative;
+                overflow: hidden;
+            }
+            .project-label {
+                position: absolute;
+                top: -575px;
+                left: 5px;
+            }
+            .card-1 {
+                margin-top: 100px;
+            }
+            .description {
+                opacity: 1;
+            }
+
+        /* contact section */
+        .socmed-cont {
+            right: 20px;
+            width: 200px;
+        }
     }
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 100px;
-        gap: 40px;
-        display: none;
-        justify-content: center;
-        flex-direction: column;
-        background-color: black;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
+    @media screen and (max-width: 425px) {
+        /* rocket */
+            .rocket {
+                scale: 0.6;
+                left: -10px;
+            }
     }
-    .hamburger {
-        display: flex;
-    }
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
