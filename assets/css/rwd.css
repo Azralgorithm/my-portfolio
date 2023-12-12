@@ -12,16 +12,22 @@
             }
             .nav-menu {
                 position: fixed;
-                left: -100%;
-                top: 100px;
+                z-index: 1000000;
+                left: -400px;
+                top: 70px;
                 gap: 40px;
-                display: none;
-                justify-content: center;
+                display: flex;
                 flex-direction: column;
-                background-color: black;
+                background-color: rgb(27,3,60);
                 width: 100%;
+                padding: 20px;
+                scale: 0;
                 text-align: center;
-                transition: 0.3s;
+                transition: all 0.3s ease-in-out;
+            }
+            .nav-menu.active {
+                left: 0;
+                scale: 1;
             }
             .hamburger {
                 display: flex;
@@ -99,6 +105,9 @@
                 opacity: 1;
                 scale: 0.7;
              }
+             .description {
+                opacity: 1;
+             }
         
         /* contact Section */
              .contact-me {
@@ -160,12 +169,21 @@
             .projects {
                 position: relative;
                 overflow: hidden;
+                height: 1580px;
             }
             .project-label {
                 position: absolute;
                 top: -575px;
                 left: 5px;
             }
+            .card:hover {
+                .tooltip {
+                    opacity: 0;
+                }
+                .project-label {
+                    opacity: 1;
+                }
+             }
             .card-1 {
                 margin-top: 100px;
             }
@@ -176,7 +194,8 @@
         /* contact section */
         .socmed-cont {
             right: 20px;
-            width: 200px;
+            width: 40px;
+            overflow-x: unset;
         }
     }
     @media screen and (max-width: 425px) {

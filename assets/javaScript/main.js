@@ -1,11 +1,14 @@
-import { navOnScroll, aboutOnScroll, showAboutTxt1, showAboutTxt2, projectsOnScroll, contactOnScroll } from "./effects.js";
+import { navOnScroll,hamburgerToggle, aboutOnScroll, showAboutTxt1, showAboutTxt2, projectsOnScroll, contactOnScroll } from "./effects.js";
 
 // Nav
     // Nav elements
     var nav = document.querySelector(".nav");
+    var hamburger = document.querySelector(".hamburger");
+    var navMenu = document.querySelector(".nav-menu");
 
     // nav event listener
-    window.addEventListener("scroll", navOnScroll)
+    window.addEventListener("scroll", navOnScroll);
+    hamburger.addEventListener("click", hamburgerToggle);
 
 // About Section 
     // About Section Elements
@@ -43,4 +46,4 @@ import { navOnScroll, aboutOnScroll, showAboutTxt1, showAboutTxt2, projectsOnScr
 
 
         
-export { nav, aboutSect, aboutContainer, aboutTxt1, aboutTxt2, aboutBtn1, aboutBtn2, rocket, projectSect, card1, card2, card3, contactSect, formContainer };       
+export { nav, navMenu, hamburger, aboutSect, aboutContainer, aboutTxt1, aboutTxt2, aboutBtn1, aboutBtn2, rocket, projectSect, card1, card2, card3, contactSect, formContainer };       

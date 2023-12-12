@@ -1,10 +1,15 @@
-import { nav, aboutSect,aboutContainer, aboutTxt1, aboutTxt2, aboutBtn1, aboutBtn2, rocket, projectSect, card1, card3, contactSect, formContainer } from "./main.js";
+import { nav, navMenu, hamburger, aboutSect,aboutContainer, aboutTxt1, aboutTxt2, aboutBtn1, aboutBtn2, rocket, projectSect, card1, card3, contactSect, formContainer } from "./main.js";
 
 // Nav
 
     // nav animation
     var navOnScroll = () => {
         window.scrollY > 0 ? nav.classList.add("nav-color-change") : nav.classList.remove("nav-color-change");
+    }
+
+    var hamburgerToggle = () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
     }
 
 // About Section 
@@ -77,4 +82,4 @@ import { nav, aboutSect,aboutContainer, aboutTxt1, aboutTxt2, aboutBtn1, aboutBt
         }
 
     }
-export { navOnScroll, aboutOnScroll, showAboutTxt1, showAboutTxt2, projectsOnScroll,contactOnScroll }
+export { navOnScroll, hamburgerToggle, aboutOnScroll, showAboutTxt1, showAboutTxt2, projectsOnScroll,contactOnScroll }
