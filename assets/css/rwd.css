@@ -192,10 +192,11 @@
             }
 
         /* contact section */
+        .socmed {
+            right: -70px;
+        }
         .socmed-cont {
-            right: 20px;
-            width: 40px;
-            overflow-x: unset;
+            width: 100px;
         }
     }
     @media screen and (max-width: 425px) {
